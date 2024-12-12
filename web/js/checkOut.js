@@ -100,7 +100,7 @@ async function loadCheckOut() {
             cartList.forEach(item => {
                 let checkItemClone = checkBodyRow.cloneNode(true);
                 checkItemClone.querySelector("#checkItemT").innerHTML = item.product.title;
-                checkItemClone.querySelector("#checkItemQty").innerHTML = item.product.qty;
+                checkItemClone.querySelector("#checkItemQty").innerHTML = item.qty;
                 checkItemClone.querySelector("#checkItemPrice").innerHTML = "Rs . " + new Intl.NumberFormat(
                         "en-US",
                         {

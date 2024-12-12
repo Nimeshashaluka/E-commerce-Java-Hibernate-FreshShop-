@@ -38,7 +38,7 @@
 
     </head>
 
-    <body onload="headerload(); loadCheckOut();">
+    <body onload="headerload(); loadCheckOut();checkLogIn();">
         <div id="header-container"></div>
 
         <!-- Start Top Search -->
@@ -124,7 +124,7 @@
                                 <div class="mb-3">
                                     <label for="country">City *</label>
                                     <select class="form-control" id="city">
-                                        <option value="0" data-display="Select">Select</option>
+                                        <option value="1" data-display="Select">Select</option>
                                         <div class="invalid-feedback" style="width: 100%;"> Your username is required. </div>
                                     </select>
                                 </div>
@@ -473,6 +473,8 @@
         <script src="js/include.js"></script>
         <script src="js/checkOut.js"></script>
         <script src="js/notification.js"></script>
+                <script src="js/index.js"></script>
+
     </body>
 
 </html>

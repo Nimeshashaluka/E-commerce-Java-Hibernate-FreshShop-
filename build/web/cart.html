@@ -31,7 +31,7 @@
 
     </head>
 
-    <body onload="headerload(); loadCartItems();">
+    <body onload="headerload(); loadCartItems();checkLogIn();">
         <div id="header-container"></div>
 
         <!-- Start Top Search -->
@@ -76,7 +76,7 @@
                                         <th>Price</th>
                                         <th>Quantity</th>
                                         <th>Total</th>
-                                        <th>Remove</th>
+                                        <!--<th>Remove</th>-->
                                     </tr>
                                 </thead>
                                 
@@ -96,16 +96,16 @@
                                             <p id="cartItemPrice"></p>
                                         </td>
                                         <td class="quantity-box">
-                                            <input  id="cartItemQty" type="number" size="4" value="1" min="0" step="1" class="c-input-text qty text">
+                                            <input  id="cartItemQty" type="number" size="4" value="" min="0" step="1" class="c-input-text qty text">
                                         </td>
                                         <td class="total-pr">
                                             <p id="cartItemSubTotal"></p>
                                         </td>
-                                        <td class="remove-pr">
+<!--                                        <td class="remove-pr">
                                             <a href="#">
                                                 <i class="fas fa-times"></i>
                                             </a>
-                                        </td>
+                                        </td>-->
                                     </tr>
                            
                                 </tbody>
@@ -357,6 +357,7 @@
         <script src="js/include.js"></script>
         <script src="js/cart.js"></script>
         <script src="js/notification.js"></script>
+        <script src="js/index.js"></script>
 
     </body>
 

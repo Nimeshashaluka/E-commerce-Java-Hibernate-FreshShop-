@@ -8,6 +8,7 @@ import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import entity.Category;
 import entity.Model;
+import entity.Product;
 import entity.productitemsize;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -35,6 +36,7 @@ public class LoadDatas extends HttpServlet {
         System.out.println("okser");
     
         Gson gson = new Gson();
+        JsonObject jsonObject = new JsonObject();
 
         Session session = HibernateUtil.getSessionFactory().openSession();
 
@@ -45,15 +47,24 @@ public class LoadDatas extends HttpServlet {
         Criteria criteria2 = session.createCriteria(Model.class);
         criteria2.addOrder(Order.asc("name"));
         List<Model> modelList = criteria2.list();
-
-        Criteria criteria3 = session.createCriteria(productitemsize.class);
-        criteria3.addOrder(Order.asc("name"));
-        List<productitemsize> productSize = criteria3.list();
-
-        JsonObject jsonObject = new JsonObject();
+        
+        Criteria criteria5 = session.createCriteria(Product.class);
+        criteria5.addOrder(Order.desc("id"));
+        jsonObject.addProperty("allProductCount", criteria5.list().size());
+        
+        criteria5.setFirstResult(1);
+        criteria5.setMaxResults(8);
+        
+        List<Product>productList =criteria5.list();
+        
+        for(Product product : productList){
+            product.setUser(null);
+        }
+        
         jsonObject.add("categoryList", gson.toJsonTree(categoryList));
         jsonObject.add("modelList", gson.toJsonTree(modelList));
-        jsonObject.add("productSize", gson.toJsonTree(productSize));
+        jsonObject.add("productList", gson.toJsonTree(productList));
+        jsonObject.addProperty("success", true);
 
         response.setContentType("application/json");
         response.getWriter().write(gson.toJson(jsonObject));

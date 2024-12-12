@@ -12,10 +12,9 @@
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/nimes/OneDrive/Desktop/FreshShop-main/FreshShop-main/web/my-account.html</file>
-            <file>file:/C:/Users/nimes/OneDrive/Desktop/FreshShop-main/FreshShop-main/web/test1.jsp</file>
-            <file>file:/C:/Users/nimes/OneDrive/Desktop/FreshShop-main/FreshShop-main/web/index.html</file>
-            <file>file:/C:/Users/nimes/OneDrive/Desktop/FreshShop-main/FreshShop-main/src/java/controller/LoadSingleProduct.java</file>
+            <file>file:/C:/Users/nimes/OneDrive/Desktop/FreshShop-main/FreshShop-main/web/shop.html</file>
+            <file>file:/C:/Users/nimes/OneDrive/Desktop/FreshShop-main/FreshShop-main/web/js/search.js</file>
+            <file>file:/C:/Users/nimes/OneDrive/Desktop/FreshShop-main/FreshShop-main/src/java/controller/SearchProducts.java</file>
         </group>
     </open-files>
 </project-private>
